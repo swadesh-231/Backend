@@ -1,14 +1,13 @@
 import "dotenv/config";
 import app from "./app.js";
 import connectDB from "./db/db.js";
-import express from "express";
 
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 8080;
 
 connectDB()
   .then(() => {
     app.listen(port, () => {
-      console.log(`app listening on port http://localhost:${port}`);
+      console.log(`Example app listening on port http://localhost:${port}`);
     });
   })
   .catch((err) => {
